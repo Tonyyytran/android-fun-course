@@ -9,7 +9,6 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
-    Intent intent = new Intent(this, SecondActivity.class);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +18,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchSecondActivity(View view) {
         Log.d(LOG_TAG, "Button clicked!");
-    }
-    public void startActivity(){
+        Intent intent = new Intent(this, SecondActivity.class);
         startActivity(intent);
     }
+
+
+//    public void startActivity(){
+//        startActivity(intent);
+//    }
 }
