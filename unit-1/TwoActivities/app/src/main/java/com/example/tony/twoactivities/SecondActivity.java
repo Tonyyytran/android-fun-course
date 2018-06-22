@@ -20,7 +20,7 @@ public class SecondActivity extends AppCompatActivity {
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         TextView textView = (TextView) findViewById(R.id.text_message);
         textView.setText(message);
-        mReply = (EditText) findViewByID(R.id.enter_message_box_second);
+        mReply = (EditText) findViewById(R.id.enter_message_box_second);
     }
 
     public void returnReply(View view) {
