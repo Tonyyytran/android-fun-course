@@ -3,4 +3,8 @@
     <string name="button_main">Send</string>
     <string name="text_header_second_activity">Message Received</string>
     <string name="activity2_name">Second Activity</string>
+    <string name="user_hint_text">Enter Your Message Here</string>
+    <string name="button_reply">reply</string>
+    <string name="edit_text_second">Enter Your Reply Here</string>
+    <string name="text_header_reply">Reply Received</string>
 </resources>
