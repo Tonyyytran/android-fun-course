@@ -11,10 +11,10 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
-    public static final String EXTRA_MESSAGE = "com.example.android.twoactivities.extra.MESSAGE";
+    public static final String EXTRA_MESSAGE = "com.example.tony.twoactivities.extra.MESSAGE";
     public static final int TEXT_REQUEST = 1;
     private EditText mMessageEditText;
-    private TextView mReplytHeadTextView;
+    private TextView mReplyHeadTextView;
     private TextView mReplyTextView;
 
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mMessageEditText = findViewById(R.id.enter_message_box);
-        mReplytHeadTextView = findViewById(R.id.text_header_reply);
+        mReplyHeadTextView = findViewById(R.id.text_header_reply);
         mReplyTextView = findViewById(R.id.text_message_reply);
     }
 
@@ -35,12 +35,13 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, TEXT_REQUEST);
     }
 
+    //
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == TEXT_REQUEST) {
             if (resultCode == RESULT_OK) {
                 String reply = data.getStringExtra(SecondActivity.EXTRA_REPLY);
-                mReplytHeadTextView.setVisibility(View.VISIBLE);
+                mReplyHeadTextView.setVisibility(View.VISIBLE);
                 mReplyTextView.setText(reply);
                 mReplyTextView.setVisibility(View.VISIBLE);
                 mMessageEditText.setText("");
