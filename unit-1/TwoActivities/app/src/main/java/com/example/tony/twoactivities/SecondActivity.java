@@ -18,9 +18,9 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        TextView textView = (TextView) findViewById(R.id.text_message);
+        TextView textView = findViewById(R.id.text_message);
         textView.setText(message);
-        mReply = (EditText) findViewById(R.id.enter_message_box_second);
+        mReply = findViewById(R.id.enter_message_box_second);
     }
 
     public void returnReply(View view) {

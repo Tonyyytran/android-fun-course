@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mMessageEditText = (EditText) findViewById(R.id.enter_message_box);
-        mReplytHeadTextView = (TextView) findViewById(R.id.text_header_reply);
-        mReplyTextView = (TextView) findViewById(R.id.text_message_reply);
+        mMessageEditText = findViewById(R.id.enter_message_box);
+        mReplytHeadTextView = findViewById(R.id.text_header_reply);
+        mReplyTextView = findViewById(R.id.text_message_reply);
     }
 
     public void launchSecondActivity(View view) {
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 mReplytHeadTextView.setVisibility(View.VISIBLE);
                 mReplyTextView.setText(reply);
                 mReplyTextView.setVisibility(View.VISIBLE);
+                mMessageEditText.setText("");
             }
         }
     }
