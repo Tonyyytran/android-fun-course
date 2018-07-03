@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="12dp"
-    tools:context=".MainActivity">
+    tools:context="com.example.tony.implicitintents.MainActivity">
 
     <TextView
         android:id="@+id/text_url"
