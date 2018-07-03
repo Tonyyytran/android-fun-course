@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Implicit Intent 2</string>
+    <string name="text_url">text_url</string>
+    <string name="button_url">button_url</string>
+    <string name="text_location">text_location</string>
+    <string name="button_location">button_location</string>
+    <string name="text_share">text_share</string>
+    <string name="button_share">button_share</string>
+</resources>
