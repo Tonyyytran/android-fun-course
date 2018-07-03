@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.android.implicitintentsreceiver.R;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView mWebsiteTextView;
