@@ -7,32 +7,30 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText mWebsiteEditText;
-    private EditText mLocationEditText;
-    private EditText mShareTextEditText;
+    private TextView mWebsiteTextView;
+    private TextView mLocationTextView;
+    private TextView mShareTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mWebsiteEditText = findViewById(R.id.text_url);
-        mLocationEditText = findViewById(R.id.text_location);
-        mShareTextEditText = findViewById(R.id.text_share);
+        mWebsiteTextView = findViewById(R.id.text_url);
+        mLocationTextView = findViewById(R.id.text_location);
+        mShareTextView = findViewById(R.id.text_share);
     }
 
     public void openWebsite (View view) {
-        // Get the URL text.
-        String url = mWebsiteEditText.getText().toString();
 
-        // Parse the URI and create the intent.
+        String url = mWebsiteTextView.getText().toString();
+
         Uri webpage = Uri.parse(url);
         Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
 
-        // Find an activity to hand the intent and start that activity.
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         } else {
@@ -41,15 +39,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openLocation (View view) {
-        // Get the string indicating a location. Input is not validated; it is
-        // passed to the location handler intact.
-        String loc = mLocationEditText.getText().toString();
 
-        // Parse the location and create the intent.
+        String loc = mLocationTextView.getText().toString();
+
         Uri addressUri = Uri.parse("geo:0,0?q=" + loc);
         Intent intent = new Intent(Intent.ACTION_VIEW, addressUri);
 
-        // Find an activity to handle the intent, and start that activity.
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
@@ -59,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void shareText(View view) {
-        String txt = mShareTextEditText.getText().toString();
+        String txt = mShareTextView.getText().toString();
         String mimeType = "text/plain";
 
         ShareCompat.IntentBuilder
