@@ -7,7 +7,7 @@
     android:padding="12dp"
     tools:context="com.example.tony.implicitintents.MainActivity">
 
-    <TextView
+    <EditText
         android:id="@+id/text_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,9 +19,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:onClick="openWebsite"
         android:text="@string/button_url" />
 
-    <TextView
+    <EditText
         android:id="@+id/text_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,9 +34,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:onClick="openLocation"
         android:text="@string/button_location" />
 
-    <TextView
+    <EditText
         android:id="@+id/text_share"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:onClick="shareText"
         android:text="@string/button_share" />
 
 </android.support.v7.widget.LinearLayoutCompat>

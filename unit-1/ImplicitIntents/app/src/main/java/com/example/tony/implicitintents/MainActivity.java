@@ -7,15 +7,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.android.implicitintentsreceiver.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mWebsiteTextView;
-    private TextView mLocationTextView;
-    private TextView mShareTextView;
+    private EditText mWebsiteTextView;
+    private EditText mLocationTextView;
+    private EditText mShareTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
