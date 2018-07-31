@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_phonenumber"
+            android:inputType="phone"
+            />
+
+        <Spinner
+            android:id="@+id/label_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+        <Button
+            android:id="@+id/button_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showText"
+            android:text="@string/show_button"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/title_phonelabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number:"
+        />
+
+        <TextView
+            android:id="@+id/text_phonelabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nothing entered."
+        />
+
+    </LinearLayout>
+
+</RelativeLayout>

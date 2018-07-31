@@ -11,17 +11,18 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/Toast"
+        android:id="@+id/button_toast"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_weight=".25"
         android:background="?attr/colorPrimary"
-        android:text="@string/button_label_toast"
+        android:text="@string/say_hello_button"
         android:textColor="@android:color/white"
-        android:textSize="@android:dimen/app_icon_size" />
+        android:textSize="@android:dimen/app_icon_size"
+        android:onClick="helloButtonClicked"/>
 
     <TextView
-        android:id="@+id/Textview"
+        android:id="@+id/count_view"
         android:layout_width="match_parent"
         android:layout_height="558dp"
         android:layout_weight="2"
@@ -40,5 +41,6 @@
         android:background="?attr/colorPrimary"
         android:text="@string/button_label_count"
         android:textColor="@android:color/white"
-        android:textSize="@android:dimen/app_icon_size" />
+        android:textSize="@android:dimen/app_icon_size"
+        android:onClick="incrementCount"/>
 </LinearLayout>
